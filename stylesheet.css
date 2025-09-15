@@ -1,0 +1,2065 @@
+
+
+html,body{
+    margin:0px;
+    padding:0px;
+    height:100%;
+}
+
+
+
+/* for nav  */
+/* Needs to done: check that nav don hav proper are so while scrooling nothing will create problem */
+.nav{
+    top:0;
+    width: 100%;
+    color: #ffffff;
+    text-align: right;
+    /* background-color: #6C7F92; */
+    font-family: 'Katibeh',serif;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;/* for the position of the nav items*/
+    width:100%;
+    /* padding: 8px 30px; */
+    /* box-sizing: border-box; */
+    position:absolute;
+}
+
+.navinside{
+    list-style:none; 
+    display: flex;
+    gap: 30px;/*creste space between nav items*/
+    margin:0px;
+    padding-right: 30px;
+}
+
+.navinside a{
+    text-decoration: none;
+    color:#05234D;
+    font-size: 30px;
+    transition: all 0.3s ease;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transform-origin: all 0.3s ease;
+    display: inline-block;
+    transform-origin: right;
+    font-weight: 400;
+}
+
+.navinside a:hover{
+    padding-top:0;
+    font-weight: 600;
+    box-shadow: 0 4px 8px black;
+    transform: scale(1.1);/* grows slightly*/
+    background-color: #05234D;
+    /* background-color: rgba(255, 255, 255, 0.1);make item pop */
+    color: #ffffff;
+}
+
+/* main: scetion 1 */
+.mainphoto{
+    padding-top: 60px;
+    background-image: url(homebg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 650px;
+    margin: 0;
+    width:100%;
+}
+
+
+.heading, .description{
+    color: #05234D;
+    margin:0;
+    padding:0;
+    z-index: 2;
+}
+
+.heading h1{
+      font-family: 'Kaushan Script',cursive;
+      font-size: 92px;
+      margin-bottom: 0px;
+      margin-top: 20px;
+      padding-bottom: 0;
+}
+
+.description{
+    font-family: 'Katibeh',serif;
+    font-size: 36px;
+}
+
+.description h3,.description p{
+    margin: 5px 0;
+}
+
+.blurbox{
+    padding :30px 40px 30px 60px; /*to create little space*/
+    backdrop-filter:blur(50px);/* for controlling blurness*/
+    box-shadow: 0px 0px 15px rgba(227,228,237,0.2);
+    background-color: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 20px; /* box roundness from edge*/
+    box-sizing: border-box;
+    position:absolute;
+    transform: translateY(30%);/* position of the box vertical */
+    margin-left: 144px;/* 1.5 almost far from the left*/
+    margin-top: 100px;
+    
+}
+
+.sidebar{
+    width: 5px;
+    background-color: rgba(234, 240, 248, 0.5);
+    border-radius:2px;
+    flex-shrink: 0;
+    height: 90%;/*height inside the box*/
+    position: absolute;/* for putting iinside the box*/
+    left: 30px;/*gap from left side*/
+    top:5%;/*left 105 space from top*/
+}
+
+.photobutton{
+    text-align: center;
+    position: absolute;
+    bottom: 40px;
+    left:50%;
+    transform: translateY(-50%);
+}
+.btn{
+    display: inline-block;/* so padding will work properly*/
+    background-color: #05234D;
+    color:#ffffff;
+    font-family: 'Kaushan Script',cursive;
+    text-decoration: none;
+    border-radius :35px;/* to round the corners*/
+    font-size: 20px;
+    padding: 10px;
+    margin-top:15px;
+    border: 1px solid #05234D;
+    cursor: pointer;
+    transition:background-color 0.3s ease; /*smooth hover*/
+}
+
+.btn:hover{
+    background-color: #011837;
+    color:#ffffff;
+    font-weight: bold;
+}
+
+/* SECTION 2 Our Craft*/
+.ourcraft{
+    padding: 30px;
+    background-color: #ffffff;
+    margin-top: 0px;
+    margin-bottom: 50px;
+}
+.headingcraft{
+    color:#05234D;
+    font-family: 'Kaushan Script',cursive;
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+}
+.craftcontainer{
+    display: flex;/*enable flex layout*/
+    justify-content: space-between;/*space between content and image*/
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap;/* allow wrap on small screen*/
+    padding-left:30px;
+}
+
+.writingcraft {
+    color:black;
+    font-weight: bold;
+    flex:1;/* to take equa space*/
+    font-size: 32px;
+    gap: 40px;
+    font-family: 'Katibeh',serif;
+    margin-top:0px;
+    padding-top: 0px;
+}
+
+
+
+.photocraft{
+    border-radius: 30px;
+    overflow: hidden;/**/
+    flex:1;
+}
+
+.photocraft img{
+    height: 450px;
+    width:600px; /* image fill container*/
+    height:auto;/*keeps original aspect ratio*/
+    display:block;/* remove unwanted whitespace*/
+    border-radius: 30px;
+    object-fit:cover;/* image fill area properly*/
+    margin-left: 20px;
+}
+
+
+/*Service Scetion*/
+
+.service{
+    background-color: #D0DDE1;
+    padding: 10px;
+}
+
+.headingservice{
+    color:#05234D;
+    font-family: 'Kaushan Script',cursive;
+    text-align: center;
+    font-size: 48px;
+    font-weight: bold;
+}
+.tag-list{
+    width:100%;
+    max-width: 1000px;/* limit the maximum width*/
+    margin: 20px auto;/* for loop positon, putting in center*/
+    position: relative; /* means by comparing with other thing*/
+    overflow: hidden;/* hide if anything going outside the box*/
+   padding: 5px;
+}
+
+.tag{
+    position:relative;
+    margin-right: 16px;
+    display: flex;
+    align-items: center;
+    gap:6px;
+    /* background-color: #496081; */
+    color:#ffffff;
+    font-size: 18px;
+    padding: 10px 16px;
+    /* border-radius: 40px; */
+    white-space: nowrap;
+    box-shadow: 2px 1.6px 3.2px #0003, 2px 1.6px 8px #0006;
+}
+
+
+.tag img{
+    height: 280px;
+    width:auto;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: tranform 0.3s;
+    display: block;
+    padding: 5px;
+}
+.tag img:hover{
+    transform: scale(1.05);
+    box-sizing: 2px 4px 12px black;
+    font-size: 20px;
+}
+.inner{
+    display:flex;
+    gap:16px;
+    width: fit-content;/* width fits exaclty the combined width of children*/
+    animation: loop 30s linear infinite;/* animate left scroll infinitely*/
+}
+
+.tooltip{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: tranformeX(-50);
+    background-color: rgba(5,35,77,0.85);
+    color:#ffffff;
+    padding:  10px;
+    border-radius: 6px;
+    font-size: 24px;
+    opacity:0;
+    transition: opacity 0.2s ease;
+    pointer-events: none;
+     font-family: 'Katibeh',serif;
+}
+
+.tag:hover .tooltip{
+    opacity: 1;
+    text-shadow: 0px -1px 0px black;
+    text-shadow: 0px -1px 0px black;
+}
+/* .wrapper .tag:hover span.tooltip{
+    opacity: 1;
+    text-shadow: 0px -1px 0px black;
+} */
+
+
+
+/* .fade{
+    position: absolute;/* position for relative start fron it, absolute measn from 0
+    inset:0;
+    background: linear-gradient(90deg, #D0DDE1, transparent 30%, transparent 70%, #D0DDE1);/* fade effects on the edges
+    pointer-events: none;/*clicks will not work, loop willnot stop
+    z-index:2;/* appear above inner bt below other stuff
+} */
+
+@keyframes loop{
+    0%{
+        transform: translateX(0);/* start fully visible*/
+    }
+    100%{
+        transform: translateX(-50%);/*move left by half width for looping*/
+    }
+}
+/*
+.imageservice.wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:20px;
+    
+    max-width: 1200px;
+    padding: 20px;
+    margin-left: 100px;
+}
+
+.icon{
+    width: calc(33.33% -20px);
+    position:relative;
+    display: inline-block;
+    text-align: center;
+    cursor:pointer;
+    transition: tranform 0.3s ease;
+    margin-left: 20px;
+}
+.icon img{
+    width:100%;
+    height:220px;
+    border-radius: 10px;
+    object-fit: cover;
+    display: block;
+}
+
+.tooltip{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: tranformeX(-50);
+    background-color: rgba(5,35,77,0.85);
+    color:#ffffff;
+    padding:  10px;
+    border-radius: 6px;
+    font-size: 16px;
+    opacity:0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.wrapper .icon:hover span.tooltip{
+    opacity: 1;
+    text-shadow: 0px -1px 0px black;
+}
+
+.wrapper .icon:hover img{
+    transform: scale(1.05);
+    box-sizing: 0 4px 12px black;
+}
+*/
+.buttonservice{
+    text-align: center;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+@media (max-width: 768px){
+    .imageservice.wrapper{
+        flex-direction: column;
+        align-items: center;
+    }
+    .icon{
+        width:100%;
+    }
+}
+
+@media (max-width: 1024px){
+    .icon{
+        width:calc(50% -20px);
+    }
+}
+@media (max-width: 600px){
+    .icon{
+        width:100%;
+    }
+} 
+
+/*footer section*/
+.footer{
+    color:#05234D;
+    font-family: 'Katibeh',serif;
+    margin: 2px;
+    padding: 2px;
+}
+.footerBuCo{
+    display:flex;
+    padding-top: 0;
+    padding-right: 40px;
+    padding-left:40px;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 0;
+    padding-bottom: 0;
+
+}
+
+.busi{
+    text-align: left;
+    display:flex;
+    padding-left: 10px;
+}
+.footerBusi{
+    font-size: 32px;
+    font-weight: bold;
+    text-align: left;
+    flex:1;
+    padding: 0px;
+    margin-right: 5px;
+    padding-right:5px;
+}
+
+.footerMon{
+    flex:1;
+    font-size: 24px;
+    text-align: left;
+    padding-top: 10px;
+    padding-right: 3px; 
+    white-space: nowrap; /* to put timings in one line*/
+   
+}
+
+.contact{
+    display:flex;
+    padding-left: 5px;
+    margin:0;
+    text-align: right;
+    padding: 0;
+}
+
+.footerCon{
+    font-size: 32px;
+    font-weight: bold;
+    text-align: right;
+    margin-right: 5px;
+    flex:1;
+    display: flex;
+    margin-top:0px;
+}
+
+.footerSurrey{
+    font-size: 24px;
+    text-align: left;
+    flex:1;
+    padding-right: 0px;
+    margin-top:0px;
+    padding-top: 0px;
+    padding-left: 2px;
+    white-space: nowrap;
+}
+.footerSurrey a{
+    text-decoration: none;
+    color:#05234D;
+}
+
+/* under line*/
+.copyright{
+    text-align: center;
+    padding: 0;
+    margin-top: 0;
+}
+.footerline,.footerights{
+    padding: 0;
+    margin:0;
+}
+
+
+
+/* CONTACT PAGE CODE */
+
+.main{
+    background-image: url("contactBg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 170vh;
+    margin-top: 0px;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.conbg{
+    padding : 100px; /*to create little space*/
+    margin: 80px;
+    padding-top: 50px;
+    backdrop-filter:blur(50px);/* for controlling blurness*/
+    box-shadow: 0px 0px 15px rgba(227,228,237,0.2);
+    background-color: #8b90f7;
+    border: 1px solid #9A9CC1;
+    border-radius: 100px; /* box roundness from edge*/
+    box-sizing: border-box;
+  
+   
+    
+}
+.conUpper{
+    color:#ffffff;
+    text-align: center;
+}
+
+.conUpper h1{
+ font-family: 'Kaushan Script',cursive;
+ font-size: 120px;
+ font-weight: bold;
+ padding: 10px;
+ margin: 5px;   
+}
+
+.conUpper p{
+    font-family: 'Katibeh',serif;
+    font-size: 38px;
+    padding: 5px;
+    margin: 5px;
+}
+
+.conlower{
+    display: flex;
+    gap:10px;
+    margin-top: 40px;
+}
+
+.conLoc{
+    flex: 40%;
+
+}
+.conLoc h6{
+    color:#011837;
+    font-size: 34px;
+    font-family: 'Katibeh',serif;
+    margin: 5px;
+}
+
+.conLoc p, a{
+    color:#fff;
+    text-decoration: none;
+    font-family: 'Katibeh',serif;
+    font-size: 30px;
+    margin: 5px;
+}
+
+.conMail{
+    flex: 60%;
+    display: flex;
+    gap:20px;
+}
+.sidebarCon{
+    flex: 1;
+    width: 5px;
+    background-color: rgba(234, 240, 248, 0.5);
+    border-radius:2px;
+    flex-shrink: 0;
+    height: 90%;/*height inside the box*/
+    /* position: absolute;for putting iinside the box */
+    left: 30px;/*gap from left side*/
+    top:5%;/*left 105 space from top*/
+}
+.form-group{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    
+}
+
+form.conName{
+     color:#011837;
+    font-size: 34px;
+    font-family: 'Katibeh',serif;
+    margin: 15px;
+    font-weight:bolder;
+}
+input, textarea{
+    width:500px;
+    height: 100%;
+    border: #011837;
+    border-radius: 8px;
+    border-color: #a7c9f9;
+    color: black;
+    font-size: 24px;
+    box-shadow: #e5edfa;
+    transition: all 0.4s ease;
+    font-family: 'Katibeh',serif;
+}
+input:focus, textarea:focus{
+outline:#011837;
+box-shadow: 0 0 10px 2px rgba(241, 240, 243, 0.8);
+background-color: #cddef5;
+}
+button[type="submit"] {
+  background-color:#011837;
+  color: white;
+  border: none;
+   margin: 10px; 
+  padding: 12px 24px;
+  border-radius: 24px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: 'Kaushan Script',cursive;
+}
+
+button[type="submit"]:hover {
+  background-color: #011837;
+  font-weight: bolder;
+  color: #ffffff;
+}
+.bton{
+    display: inline-block;/*so padding will work properly*/
+    background-color: #05234D;
+    color:#ffffff;
+    font-family: 'Kaushan Script',cursive;
+    text-decoration: none;
+    border-radius :35px;/* to round the corners*/
+    font-size: 28px;
+    padding: 10px;
+    margin-left: 300px;
+    margin-top:25px;
+    border: 1px solid #05234D;
+    cursor: pointer;
+    transition:background-color 0.3s ease; /*smooth hover*/
+    text-align: center;
+}
+
+.bton:hover{
+    background-color: #011837;
+    color:#ffffff;
+    font-weight: bold;
+}
+
+/* for about us */
+.headingAbout{
+  background-color: #05234D;
+    color:#ffffff;
+    font-family: 'Kaushan Script',cursive;
+    font-size: 72px;
+   padding :.1px;
+   margin-top:45px;
+}
+
+.aboutB1{
+    color: black;
+    font-family: 'Katibeh',serif;
+    text-align: center;
+    font-size: 32px;
+    padding: 40px;
+   padding-bottom: 0px;
+}
+
+.B1p2{
+    font-size: 40px;
+}
+
+.aboutpart-3{
+    font-family: 'Kaushan Script',cursive;
+    font-size: 48px;
+    color: black;
+    background-color:#a7c9f9;
+    padding: 10px;
+    padding-top:5px;
+}
+
+.aboutp3p{
+text-align: center;
+margin-bottom:15px;
+font-size: 48px;
+margin-top:15px;
+}
+
+.aboutpart3{
+display: flex;
+}
+
+.aboutpart3p1{
+    color: black;
+    font-family: 'Katibeh',serif;
+    font-size: 48px;
+    flex: 1;
+    padding: 20px;
+    margin-top:15px;
+    margin-left: 15px;
+}
+
+.photocraft2{
+    border-radius: 30px;
+    overflow: hidden;/**/
+    flex:1;
+    margin: 20px;
+    margin-right:5px;
+}
+
+.photocraft2 img{
+    width:80%; /* image fill container*/
+    height:auto;/*keeps original aspect ratio*/
+    display:block;/* remove unwanted whitespace*/
+    border-radius: 30px;
+    object-fit:cover;/* image fill area properly*/
+}
+.part3p1{
+    color:black;
+    font-size: 24px;
+    font-weight:bold;
+    padding:0px;
+   margin:0px;
+}
+
+.aboutpart3p2{
+    color:black;
+    font-size: 20px;
+    font-weight:200;
+    padding:0px;
+    margin:0px;
+}
+
+.section3About{
+    font-family: 'Kaushan Script',cursive;
+    font-size: 48px;
+    color: black;
+    text-align: center;
+}
+
+.button{
+    justify-content: space-between;
+    gap:30px;
+    display:flex;
+    margin:30px;
+    margin-left: 350px;
+    margin-right: 350px;
+}
+
+.button .btn{
+    margin-top: 40px;
+}
+
+/* .footer1{
+    background-color: #05234D;
+    color:#ffffff;
+}
+
+.footer1 a{
+    color: #ffffff;
+}
+
+.footer1 a:hover{
+    text-decoration: underline;
+} */
+
+
+.btn1{
+    display: inline-block;/* so padding will work properly*/
+    background-color: #05234D;
+    color:#ffffff;
+    font-family: 'Kaushan Script',cursive;
+    text-decoration: none;
+    border-radius :35px;/* to round the corners*/
+    font-size: 30px;
+    padding: 10px;
+    margin-top:15px;
+    border: 1px solid #05234D;
+    cursor: pointer;
+    transition:background-color 0.3s ease; /*smooth hover*/
+}
+
+.btn1:hover{
+    background-color: #011837;
+    color:#ffffff;
+    font-weight: bolder;
+}
+
+
+/* Footer for About us page*/
+ .footer1{
+    padding-top:10px;
+    font-family: 'Katibeh',serif;
+    margin: 2px;
+    padding: 2px;
+    background-color: #05234D;
+    color:#ffffff;
+}
+.footerBuCo1{
+    display:flex;
+    padding-top: 0;
+    padding-right: 40px;
+    padding-left:40px;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 0;
+    padding-bottom: 0;
+
+}
+
+.busi1{
+    text-align: left;
+    display:flex;
+    padding-left: 10px;
+}
+.footerBusi1{
+    font-size: 32px;
+    font-weight: bold;
+    text-align: left;
+    flex:1;
+    padding: 0px;
+    margin-right: 5px;
+    padding-right:5px;
+}
+
+.footerMon1{
+    flex:1;
+    font-size: 24px;
+    text-align: left;
+    padding-top: 10px;
+    padding-right: 3px; 
+    white-space: nowrap; /* to put timings in one line*/
+   
+}
+
+.contact1{
+    display:flex;
+    padding-left: 5px;
+    margin:0;
+    text-align: right;
+    padding: 0;
+}
+
+.footerCon1{
+    font-size: 32px;
+    font-weight: bold;
+    text-align: right;
+    margin-right: 5px;
+    flex:1;
+    display: flex;
+    margin-top:0px;
+}
+
+.footerSurrey1{
+    font-size: 24px;
+    text-align: left;
+    flex:1;
+    padding-right: 0px;
+    margin-top:0px;
+    padding-top: 0px;
+    padding-left: 2px;
+    white-space: nowrap;
+}
+.footerSurrey1 a{
+    text-decoration: none;
+    color:#ffffff;
+}
+
+/*PORTFOLIO */
+/* under line*/
+.copyright1{
+    text-align: center;
+    padding: 0;
+    margin-top: 0;
+}
+.footerline1,.footerights1{
+    padding: 0;
+    margin:0;
+}
+
+.portfolioSection1{
+    background-color: rgb(210, 213, 216);
+    display: flex;
+    margin-top: 50px;
+    height: 80vh;
+    position: relative;
+}
+
+.portfolioLeft{
+    background-color: #050587;
+    flex: 0 0 20%;
+}
+
+.portfolioWritten{
+   backdrop-filter: blur(50px);
+    box-shadow: rgba(227, 228, 237, 0.2) 0px 0px 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-sizing: border-box;
+    position: absolute;
+    margin-left: 20px;
+    margin-top: 80px;
+    top: 10%;
+    left: 10%;
+    color: rgb(255, 255, 255);
+    width: 100%;
+    max-width: 800px;
+    z-index: 2;
+    padding: 10px 40px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.18);
+    border-image: initial;
+    border-radius: 20px;
+}
+.portfolioWritten1 h1{
+     font-family: 'Kaushan Script',cursive;
+     color:#fff;
+     font-size: 72px;
+     margin: 10px 0px;
+}
+
+.portfolioWritten1 p{
+    font-family: 'Katibeh',serif;
+    font-size: 28px;
+    margin:5px 0px;
+    color:black;
+    letter-spacing: 1px;
+}
+
+.contactButton{
+    text-align: center;
+}
+.portfolioRight{
+    background-image: url(h2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 80vh;
+    flex: 0 0 80%;
+    background-position: center center;
+}
+
+.portfolioRight img{
+  height: 100%;
+  width: auto;
+  display: block;
+  object-fit: block;
+}
+
+.sidebar1{
+    width: 5px;
+    background-color: white;
+    border-radius:2px;
+    flex-shrink: 0;
+    height: 90%;/*height inside the box*/
+    position: absolute;/* for putting iinside the box*/
+    left: 50px;/*gap from left side*/
+    top:5%;/*left 105 space from top*/
+}
+.sidebar2{
+    width: 5px;
+    background-color: white;
+    border-radius:2px;
+    flex-shrink: 0;
+    height: 90%;/*height inside the box*/
+    position: absolute;/* for putting iinside the box*/
+    left: 90px;/*gap from left side*/
+    top:5%;/*left 105 space from top*/
+}
+
+/*Section1 photos*/
+
+.portfolioSection2{
+    margin: 15px auto;
+    max-width: 1000px;
+    padding: 0 0px;
+    text-align: center;
+}
+
+.portfolioSection2Heading h2{
+    font-family: 'Kaushan Script',cursive;
+     color:#05234D;
+     font-size: 56px;
+     margin: 15px auto;
+     padding-top:20px;
+     text-align: center;
+}
+
+.portfolioSection2Heading p{
+    font-family: 'Katibeh',serif;
+    font-size: 28px;
+    margin: 15px auto;
+    color:black;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.houses{
+    display: grid;
+    grid-template-columns:repeat(3, 1fr); 
+    grid-template-rows:repeat(2, 1fr);    
+    gap: 20px;
+    margin:0;
+    padding:0;
+    justify-content: center;
+     /* overflow: hidden; */
+     box-sizing: border-box;
+   /* margin: 10px;  */
+  /* position:relative;helps in making hover stuff*/
+}
+
+.houseimages-container, .houseimages-container1, .houseimages-container2, .houseimages-container3, .houseimages-container4, .houseimages-container5 {
+    display: block;
+    object-fit: cover;
+    position:relative;
+    width: 340px;
+    height: 340px;
+} /*for making img and wriiten in one container*/
+
+.houseimages-container img, .houseimages-container1 img, .houseimages-container2 img, .houseimages-container3 img, .houseimages-container4 img, .houseimages-container5 img{
+    width: 330px;
+    height: 330px;
+    object-fit: cover;/* image nicely cover in frame*/
+    transition: transform 0.4s ease;
+ 
+}
+
+/* .houseimages-container{
+    position: relative;
+    overflow: hidden;
+    width: 260px;
+    height:250px;
+}
+.houseimages-container1{
+    position: relative;
+    overflow: hidden;
+    height: 220px;
+    width: 350px;
+    margin-left: 50px;
+    padding-left:0px;
+} 
+.houseimages1 img{
+    grid-column: 1/4;/*vertically
+    grid-row: 1/4;/*horizontally
+    height: 280px;
+    width: 240px;
+    padding-right: 0px;    
+    margin-right:0px;
+    transition: transform 0.3s ease; 
+} 
+/* .houseimages1:hover, .houseimages2:hover, .houseimages3:hover, .houseimages4:hover, .houseimages5:hover, .houseimages6:hover{
+     transform: scale(1.1);
+} */
+.houseimagesp{
+     font-family: 'Katibeh',serif;
+    font-size: 38px;
+    color: #fff;
+    opacity:0;
+    transition: opacity 0.3s ease;
+    position:absolute;
+    top: 0;
+    left: 0px;
+   width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display:flex;/*center posiotion of text in next 3 line*/
+    justify-content: center;
+    align-items: center;
+    transform: scale(1.05);
+    transition: transform 0.4s ease;
+    cursor: pointer;
+  
+}
+.houseimages-container:hover .houseimagesp,.houseimages-container1:hover .houseimagesp, .houseimages-container2:hover .houseimagesp, .houseimages-container3:hover .houseimagesp, .houseimages-container4:hover .houseimagesp, .houseimages-container5:hover .houseimagesp{
+    opacity: 1;
+   margin-top:0;
+      
+    
+      
+} 
+
+/*.houseimages2{
+     grid-column: 2/4;vertically 
+    grid-row: 1/4;horizontally 
+    height: 220px;
+    width: 350px;
+   
+    padding-left:0px;
+    transition: transform 0.3s ease; 
+}
+
+.houseimages3{
+    grid-column: 3/4;
+    grid-row: 1/4;
+    height: 250px;
+    width: 220px;
+     /* margin-left: -500px;
+    padding-left: -30px;  
+    padding-right: 0px;
+    margin-right: 0px;
+} 
+/*Second Line*/
+/* .houseimages4{
+    grid-column: 1/4;
+    grid-row: 2/4;
+    height: 250px;
+    width: 300px;
+    margin-top: 30px;
+}
+.houseimages5{
+    grid-column:2/4;
+    grid-row: 2/4;
+     height: 270px;
+    width: 250px;
+    margin-top:10px;
+    padding-top:0px;
+    margin-left: 30px;
+}
+.houseimages6{
+    grid-column: 3/4;
+    grid-row:2/4;
+    height: 240px;
+    width: 280px;
+    margin-top:40px;
+    margin-left:0px;
+    padding-left:0px;
+} */
+
+
+/* Section 2*/
+.portfolioSection3{
+  background-color: #e5edfa; /* Light neutral background */
+  border-radius: 16px;
+  padding: 0px 40px;
+  margin: 80px auto;
+  max-width: 1200px;
+  box-shadow: 0 10px 20px rgba(5, 5, 135, 0.1);
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.imgsection2{
+    display: flex;
+    height:100vh;
+    width:100%;
+     padding-bottom: 0;
+   margin-bottom: 0;
+}
+
+/*left sede*/
+.leftSection2{
+    flex: 0 0 30%;   
+    padding-top:80px;
+    padding-bottom: 0;
+    margin-top: 0px;
+    box-sizing: border-box;
+    display:flex;
+    flex-direction: column; /* Stack children vertically */
+    justify-content: space-between; /* Space out text & image */
+    flex:1;
+ 
+}
+
+.portfolioSection3Heading h2{
+     font-family: 'Kaushan Script',cursive;
+     color:#05234D;
+     font-size: 62px;
+     margin-bottom: 20px;
+     margin-top: 0;
+     text-align: center;
+}
+
+.portfolioSection3Heading p{
+    font-family: 'Katibeh',serif;
+    font-size: 28px;
+    margin-bottom: 15px;
+    color:black;
+    letter-spacing: 1px;
+}
+.imggrid2{
+    display: grid;
+    gap:3px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    flex-grow: 1; /* Makes the image fill the remaining space */
+    margin-top: 0px;
+    padding:0px;
+    padding-top: 0px;
+}
+.imggrid2 img{
+    width: 280px;
+    height:180px;
+    display:block;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(38, 11, 96, 0.2);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    padding: 0;
+    margin:0px;
+}
+.imggrid2  img:hover{
+    transform: scale(1.05);
+}
+
+/* right side*/
+.rightSection2{
+    flex: 0 0 40%;
+    padding-top:0;
+    margin:0;
+    margin-left:80px;
+    padding-bottom: 0;
+}
+/* top full height for image*/
+.bigSection2{
+    flex:1;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+.bigSection2 img{
+    width:100%;
+    height:95vh;/* to make full frame photo*/
+    object-fit: cover;
+    border-radius: 0;
+    padding-bottom: 0;
+    display:block;
+    margin-top:0;
+    padding-top:0;
+}
+.portfolioSection3,
+.imgsection2,
+.leftSection2,
+.rightSection2,
+.bigSection2 {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* Section 3rd for interior photos*/
+.portfolioSection4{
+    margin: 5px auto;
+    max-width: 1000px;
+    padding: 0 0px;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.portfolioSection4Heading h2{
+     font-family: 'Kaushan Script',cursive;
+     color:#05234D;
+     font-size: 62px;
+     margin-bottom: 20px;
+     margin-top: 80px;
+     text-align: center;
+}
+
+.portfolioSection4Heading p{
+    font-family: 'Katibeh',serif;
+    font-size: 28px;
+    margin: 15px auto;
+    padding-left: 50px;
+    padding-right: 50px;
+    color:black;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.photosSection4{
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-rows:repeat(auto-fit, minmax(200px, 1fr));
+    gap: 50px;
+    /* overflow: hidden; */
+    padding: 0px;
+    margin: 0px;
+    
+}
+.photosSection4 img{
+    display: block;
+    object-fit: cover;
+}
+
+.photo1{
+    grid-column: 1/4;/*vertically*/
+    grid-row: 1/4;/*horizontally*/
+    height: 280px;
+    width: 300px;
+  
+}
+.photo2{
+    grid-column: 2/4;/*vertically*/
+    grid-row: 1/4;/*horizontally*/
+    height: 280px;
+    width: 300px;
+   
+}
+.photo3{
+    grid-column: 3/4;/*vertically*/
+    grid-row: 1/4;/*horizontally*/
+    height: 280px;
+    width: 300px;
+   
+}
+.photo4{
+    grid-column: 1/4;/*vertically*/
+    grid-row: 2/4;/*horizontally*/
+   height: 280px;
+    width: 300px;
+    /* padding-top:30px; */
+}
+.photo5{
+    grid-column: 2/4;/*vertically*/
+    grid-row: 2/4;/*horizontally*/
+    height: 280px;
+    width: 300px;
+   /* padding-top:30px; */
+}
+.photo6{
+    grid-column: 3/4;/*vertically*/
+    grid-row: 2/4;/*horizontally*/
+    height: 280px;
+    width: 300px;
+    /* padding-top:30px; */
+}
+
+/* portfolio last 2nd section*/
+.talk{
+    background-color: #05234D;
+    justify-content: center;
+    gap: 30px;
+    margin:0;
+    display:flex;
+    padding: 20px;
+}
+
+.talk h3{
+    color:#ffffff;
+    font-family: 'Kaushan Script',cursive;
+    text-align: left;
+    font-size: 56px;
+    flex: 1;
+}
+
+.btnPortfolio{
+    display: inline-block;/* so padding will work properly*/
+    color: #05234D;
+    background-color:#ffffff;
+    font-family: 'Kaushan Script',cursive;
+    text-decoration: none;
+    border-radius :35px;/* to round the corners*/
+    font-size: 20px;
+    padding: 10px;
+    margin-top:15px;
+    border: 1px solid #05234D;
+    cursor: pointer;
+    transition:background-color 0.3s ease; /*smooth hover*/
+   margin:30px;
+   margin-right:80px;
+   margin-top:80px;
+}
+
+.btnPortfolio:hover{
+    color: #011837;
+    background-color:#ffffff;
+    font-weight: bold;
+}
+
+/*SERVICE PAGE*/
+
+.serviceIntro h1{
+     font-family: 'Kaushan Script',cursive;
+     font-size: 128px;
+    background-color: #05234D;
+    color:#ffffff;
+    padding :30px;
+   margin-top:48px;
+}
+.serviceIntro h3{
+    font-family: 'Kaushan Script',cursive ;
+    font-size: 50px;
+    text-align: center;
+    padding: 5px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.bar {
+    margin-top:0;
+    padding-top:0;
+    font-family: 'Kaushan Script',cursive ;
+    font-size: 58px;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.serviceIntro p{
+    font-family: 'Katibeh',serif;
+    font-size: 32px;
+    text-align: center;
+    
+}
+
+/* INTERIOR FINISHING CARPENTRY*/
+.serviceInter, .serviceCustom, .serviceCeiling, .serviceStairs, .serviceArchit, .serivceAlu{
+    display: flex;/*enable flex layout*/
+    justify-content: space-between;/*space between content and image*/
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap;/* allow wrap on small screen*/
+    padding-left:10px;
+    margin: 10px;
+}
+.serviceInterior, .serivcecustom1, .houseimage5, .serviceStairs1, .houseimage7, .serviceAlu1{
+    flex:1;
+}
+
+.houseimage4,.houseimage5 img, .houseimage6 img, .houseimage7 img , .houseimage8 img {
+    flex: 1;
+    height: 600px;
+    width: 600px;
+    margin: 10px;
+    object-fit: cover;
+    display: block;
+    transition: all 0.4s ease;
+}
+.serviceInterior1 h3, .serivcecustom1 h3, .serviceCeiling1 h3, .serviceStairs1 h3, .serviceArchit1 h3, .serviceAlu1 h3{
+    font-family: 'Katibeh',serif;
+    font-size: 52px;
+}
+.serviceInterior1 ul, .serivcecustom1 ul, .serviceCeiling1 ul, .serviceStairs1 ul, .serviceArchit1 ul, .serviceAlu1 ul{
+    padding-left: 100px;
+}
+.serviceInterior1 li, .serivcecustom1 li, .serviceCeiling1 li , .serviceStairs1 li, .serviceArchit1 li, .serviceAlu1 li{
+    list-style-type: disc;
+    padding-left:20px;
+    font-family: 'Katibeh',serif;
+    font-size: 32px;
+}
+
+.serviceInterior1, .houseimage3,  .serviceCeiling1, .serviceStairs1, .houseimage7, .serviceAlu1{
+    flex: 0 0 50%;
+    
+}
+
+.houseimage3 img{
+    height: 600px;
+    width: 600px;
+    margin: 10px;
+}
+/* hover effect*/
+.houseimage4 img:hover,.houseimage3 img :hover, .houseimage5 img :hover, .houseimage6 img :hover, .houseimage7 img :hover, .houseimage8 img:hover{
+    transform: scale(1.05); /* slitly zoom*/
+    /* filter: brightness(.5%);for making image darker */
+    padding: 0px;
+    margin:0px;
+}
+.overlay-text1:hover{
+    opacity:1;
+}
+/* show after hovering*/
+.overlay-text1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 600px;
+    height: 600px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    align-items: center;
+    font-family: 'Katibeh',serif;
+    font-size: 32px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    text-align: center;
+    margin: 10px;
+    
+    padding-top: 100px; 
+  
+
+}
+.overlay-text1 h4{
+    font-size: 48px;
+}
+
+.serviceInterior, .houseimage3, .houseimage5, .houseimage6, .houseimage7, .houseimage8{
+    position: relative;
+    width: 600px;
+    height: 600px;
+    overflow: hidden;
+    
+}
+.serivceAlu{
+    margin-bottom: 30px;
+}
+
+/*HOUSE1PIC*/
+.navhouse1pic{
+    top:0;
+    width: 100%;
+    color: #ffffff;
+    text-align: right;
+    background-color: #05234D; 
+    font-family: 'Katibeh',serif;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;/* for the position of the nav items*/
+    width:100%;
+    /* padding: 8px 30px; */
+    /* box-sizing: border-box; */
+    position: fixed;
+}
+
+.navinsidehouse1pic{
+    list-style:none; 
+    display: flex;
+    gap: 30px;/*creste space between nav items*/
+    margin:0px;
+    padding-right: 30px;
+}
+
+.navinsidehouse1pic a{
+    text-decoration: none;
+    color:#ffffff;
+    font-size: 30px;
+    transition: all 0.3s ease;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transform-origin: all 0.3s ease;
+    display: inline-block;
+    transform-origin: right;
+    font-weight: 400;
+}
+
+.navinsidehouse1pic a:hover{
+    padding-top:0;
+    font-weight: 600;
+    box-shadow: 0 4px 8px black;
+    transform: scale(1.1);/* grows slightly*/
+    background-color: #ffffff;
+    /* background-color: rgba(255, 255, 255, 0.1);make item pop */
+    color: #05234D;
+}
+
+/* now pic section*/
+.house1pic{
+    margin: 20px;
+    padding:20px;
+    margin-top:80px;
+}
+
+.house1pic1{
+    display: flex;
+    gap:30px;
+}
+
+
+.house1img{
+    flex: 0 0 70%;
+    margin: 10px;
+    width:600px;
+    height: 800px;
+}
+
+.houseul{
+    flex: 0 0 30%;
+    margin: 10px;
+    list-style-type: disc;
+    padding-left:80px;
+    font-family: 'Katibeh',serif;
+    font-size: 32px;
+    color:#000;
+    padding-top: 120px;
+}
+
+.house1pic2{
+    margin: 30px;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+}
+
+.house1pic2 img{
+   width: 100%;
+   height: auto;
+   object-fit: cover;
+   border-radius: 2px;
+   cursor: pointer;
+}
+
+/* NOW ALL THE MOBILE AND TABLET SPACE CODING*/
+
+/* Keep nav horizontal but responsive on tablets and phones */
+@media (max-width: 1024px) {
+    .navinside a {
+        font-size: 24px;
+        padding: 5px;
+    }
+
+    .navinside {
+        gap: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navinside a {
+        font-size: 20px;
+        padding: 4px 6px;
+    }
+
+    .navinside {
+        gap: 10px;
+        padding-right: 10px;
+    }
+
+    .nav {
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navinside a {
+        font-size: 16px;
+        padding: 4px 5px;
+    }
+
+    .navinside {
+        gap: 5px;
+        padding-right: 5px;
+    }
+}
+.navinside {
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+/*Make .mainphoto Section Adapt*/
+@media (max-width: 768px) {
+    .mainphoto {
+        height: auto;
+        padding-bottom: 100px;
+        padding-top: 100px;
+    }
+
+    .blurbox {
+        position: static;
+        transform: none;
+        margin: 20px auto;
+        padding: 20px;
+        width: 90%;
+    }
+
+    .heading h1 {
+        font-size: 36px;
+        text-align: center;
+    }
+
+    .description {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .photobutton {
+        position: static;
+        transform: none;
+        text-align: center;
+        margin-top: 20px;
+    }
+}
+
+/* Our Craft Section */
+@media (max-width: 768px) {
+    .writingcraft {
+        font-size: 20px;
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .photocraft img {
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+    }
+}
+/* For small screen*/ 
+@media (max-width: 768px){
+    .craftcontainer{
+        flex-direction: column;
+    }
+
+    .writingcraft,
+    .photocraft{
+        width: 100%;
+    }
+}
+
+/* Services Image Scroll */
+@media (max-width: 768px) {
+    .tag img {
+        height: 200px;
+        max-width: 80vw;
+    }
+
+    .tooltip {
+        font-size: 16px;
+        padding: 6px 10px;
+        bottom: 8px;
+    }
+
+    .tag-list {
+        scroll-snap-type: x mandatory;
+    }
+}
+
+
+@media (max-width: 768px) {
+  .footerBuCo {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+
+  .footerBusi, .footerCon {
+    flex: 1 1 100%;
+    margin-bottom: 15px;
+  }
+
+  .footerBusi {
+    font-size: 24px;
+  }
+
+  .footerCon {
+    font-size: 28px;
+  }
+
+.footerSurrey img, .footerMon img {
+    width: 16px;
+  }
+
+.footerSurrey a{
+    font-size:24px;
+}
+.footerMon p, .footerSurrey p {
+    font-size: 24px;
+}
+
+}
+/* DONE HOME PAGE SIZES FOR MOBILE AND TABLETS*/
+
+/* NOW FOR ABOUTUS PAGE*/
+
+/* ✅ Mobile Devices (max-width: 768px) */
+@media screen and (max-width: 768px) {
+
+  .headingAbout {
+    font-size: 36px;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .aboutB1 {
+    font-size: 20px;
+    padding: 20px;
+  }
+
+  .B1p2 {
+    font-size: 24px;
+  }
+
+  .aboutpart3 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .aboutpart3p1 {
+    font-size: 20px;
+    padding: 10px;
+  }
+
+  .part3p1 {
+    font-size: 18px;
+  }
+
+  .aboutpart3p2 {
+    font-size: 16px;
+  }
+
+  .photocraft2 {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .photocraft2 img {
+    width: 90%;
+  }
+
+  .section3About {
+    font-size: 28px;
+    padding: 10px;
+  }
+
+  .button {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin: 20px auto;
+  }
+
+  .btn1 {
+    font-size: 20px;
+    padding: 10px 20px;
+    width: 80%;
+    text-align: center;
+  }
+.footerBuCo1 {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+
+  .footerBusi1, .footerCon1 {
+    flex: 1 1 100%;
+    margin-bottom: 15px;
+  }
+
+  .footerBusi1 {
+    font-size: 24px;
+  }
+
+  .footerCon1 {
+    font-size: 28px;
+  }
+
+.footerSurrey1 img, .footerMon1 img {
+    width: 16px;
+  }
+
+.footerSurrey1 a{
+    font-size:24px;
+}
+.footerMon1 p, .footerSurrey1 p {
+    font-size: 24px;
+}
+}
+
+/* 🌐 Contact Page - Responsive Design (Tablet + Mobile) */
+
+@media screen and (max-width: 1024px) {
+
+  .main {
+    flex-direction: column;
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  .conbg {
+    width: 100%;
+    padding: 40px 20px;
+    margin: 0;
+    border-radius: 50px;
+  }
+
+  .conUpper h1 {
+    font-size: 48px;
+  }
+
+  .conUpper p {
+    font-size: 24px;
+  }
+
+  .conlower {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    margin-top: 30px;
+  }
+
+  /* 👇 Reorder the layout */
+  .conMail {
+    order: 1;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .form-group {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  form.conName {
+    font-size: 22px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    font-size: 20px;
+  }
+
+  button[type="submit"] {
+    width: 100%;
+    font-size: 20px;
+    padding: 12px;
+    margin: 20px 0 0;
+  }
+
+  .sidebarCon {
+    order: 2;
+    height: 40px;
+    width: 90%;
+    background-color: rgba(234, 240, 248, 0.5);
+    border-radius: 8px;
+  }
+
+  .conLoc {
+    order: 3;
+    width: 100%;
+    text-align: center;
+  }
+
+  .conLoc h6 {
+    font-size: 24px;
+    margin-top: 15px;
+  }
+
+  .conLoc p,
+  .conLoc a {
+    font-size: 20px;
+    word-break: break-word;
+  }
+
+  .phtobutton {
+    order: 4;
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  .bton {
+    margin: 0 auto;
+    font-size: 20px;
+    padding: 10px 30px;
+    display: inline-block;
+  }
+}
+
+/* ======== TABLET AND MOBILE (max-width: 1024px) ======== */
+@media (max-width: 600px) {
+  .serviceIntro h1 {
+    font-size: 36px;
+  }
+  .serviceIntro h3 {
+    font-size: 22px;
+  }
+  .serviceIntro p {
+    font-size: 16px;
+  }
+  .serviceText h3 {
+    font-size: 22px;
+  }
+  .serviceText ul {
+    font-size: 16px;
+  }
+  .serviceImage img {
+    height: 300px;
+  }
+  .overlay-text {
+    font-size: 14px;
+    padding: 10px;
+  }
+  .overlay-text h4 {
+    font-size: 20px;
+  }
+}
+
+/**/
+@media (max-width: 768px) {
+
+  /* Generic mobile layout for each service section */
+  .serviceInter,
+  .serviceCustom,
+  .serviceCeiling,
+  .serviceStairs,
+  .serviceArchit,
+  .serivceAlu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  /* Force heading and bullet points to come first */
+  .serviceInterior1,
+  .serivcecustom1,
+  .serviceCeiling1,
+  .serviceStairs1,
+  .serviceArchit1,
+  .serviceAlu1 {
+    order: 1;
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
+  /* Then comes the image */
+  .serviceInterior,
+  .houseimage3,
+  .houseimage5,
+  .houseimage6,
+  .houseimage7,
+  .houseimage8 {
+    order: 2;
+    width: 100%;
+  }
+
+  .houseimage3 img,
+  .houseimage5 img,
+  .houseimage6 img,
+  .houseimage7 img,
+  .houseimage8 img,
+  .serviceInterior img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  /* Hover effect on image */
+  .houseimage3 img:hover,
+  .houseimage5 img:hover,
+  .houseimage6 img:hover,
+  .houseimage7 img:hover,
+  .houseimage8 img:hover,
+  .serviceInterior img:hover {
+    transform: scale(1.05);
+  }
+
+  /* Tooltip styling */
+  .overlay-text1 {
+    position: absolute;
+    /* bottom: 10px; */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color:rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 6px;
+    font-size: 18px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    max-width: 100%;
+    max-height: 94%;
+    text-align: center;
+    padding-bottom: 0px;
+    overflow: hidden;
+  }
+
+  /* Show tooltip on hover */
+  .houseimage3:hover .overlay-text1,
+  .houseimage5:hover .overlay-text1,
+  .houseimage6:hover .overlay-text1,
+  .houseimage7:hover .overlay-text1,
+  .houseimage8:hover .overlay-text1,
+  .serviceInterior:hover .overlay-text1 {
+    opacity: 1;
+  }
+}
