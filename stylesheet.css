@@ -2063,3 +2063,200 @@ display: flex;
     opacity: 1;
   }
 }
+@media (max-width: 425px){
+    body,html{
+    margin:0px;
+    padding:0px;
+    height:100%;
+}
+/* for nav  */
+/* Needs to done: check that nav don hav proper are so while scrooling nothing will create problem */
+.nav{
+    top:0;
+    width: 100%;
+    color: #ffffff;
+    text-align: right;
+    font-family: 'Katibeh',serif;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;/* for the position of the nav items*/
+    width:100%;
+    position:absolute;
+}
+
+.navinside{
+    list-style:none; 
+    display: flex;
+    gap: 30px;/*creste space between nav items*/
+    margin:0px;
+    padding-right: 30px;
+}
+
+.navinside a{
+    text-decoration: none;
+    color:#05234D;
+    font-size: 4vh;
+    transition: all 0.3s ease;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transform-origin: all 0.3s ease;
+    display: inline-block;
+    transform-origin: right;
+    font-weight: 400;
+}
+
+.navinside a:hover{
+    padding-top:0;
+    font-weight: 600;
+    box-shadow: 0 4px 8px black;
+    transform: scale(1.1);/* grows slightly*/
+    background-color: #05234D;
+    /* background-color: rgba(255, 255, 255, 0.1);make item pop */
+    color: #ffffff;
+}
+
+/* main: scetion 1 */
+.mainphoto{
+    padding-top: 60px;
+    background-image: url(homebg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 650px;
+    margin: 0;
+    width:100%;
+}
+
+
+.heading, .description{
+    color: #05234D;
+    margin:0;
+    padding:0;
+    z-index: 2;
+}
+
+.heading h1{
+      font-family: 'Kaushan Script',cursive;
+      font-size: 92px;
+      margin-bottom: 0px;
+      margin-top: 20px;
+      padding-bottom: 0;
+}
+
+.description{
+    font-family: 'Katibeh',serif;
+    font-size: 36px;
+}
+
+.description h3,.description p{
+    margin: 5px 0;
+}
+
+.blurbox{
+    padding :30px 40px 30px 60px; /*to create little space*/
+    backdrop-filter:blur(50px);/* for controlling blurness*/
+    box-shadow: 0px 0px 15px rgba(227,228,237,0.2);
+    background-color: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 20px; /* box roundness from edge*/
+    box-sizing: border-box;
+    position:absolute;
+    transform: translateY(30%);/* position of the box vertical */
+    margin-left: 144px;/* 1.5 almost far from the left*/
+    margin-top: 100px;
+    
+}
+
+.sidebar{
+    width: 5px;
+    background-color: rgba(234, 240, 248, 0.5);
+    border-radius:2px;
+    flex-shrink: 0;
+    height: 90%;/*height inside the box*/
+    position: absolute;/* for putting iinside the box*/
+    left: 30px;/*gap from left side*/
+    top:5%;/*left 105 space from top*/
+}
+
+.photobutton{
+    text-align: center;
+    position: absolute;
+    bottom: 40px;
+    left:50%;
+    transform: translateY(-50%);
+}
+.btn{
+    display: inline-block;/* so padding will work properly*/
+    background-color: #05234D;
+    color:#ffffff;
+    font-family: 'Kaushan Script',cursive;
+    text-decoration: none;
+    border-radius :35px;/* to round the corners*/
+    font-size: 20px;
+    padding: 10px;
+    margin-top:15px;
+    border: 1px solid #05234D;
+    cursor: pointer;
+    transition:background-color 0.3s ease; /*smooth hover*/
+}
+
+.btn:hover{
+    background-color: #011837;
+    color:#ffffff;
+    font-weight: bold;
+}
+/* SECTION 2 Our Craft*/
+.ourcraft{
+    padding: 30px;
+    background-color: #ffffff;
+    margin-top: 0px;
+    margin-bottom: 50px;
+}
+.headingcraft h1{
+    color:#05234D;
+    font-family: 'Kaushan Script',cursive;
+    font-size: 5vh; 
+    font-weight: bold;
+    text-align: left;
+}
+
+.craftcontainer{
+    display: flex;/*enable flex layout*/
+    justify-content: space-between;/*space between content and image*/
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap;/* allow wrap on small screen*/
+    padding-left:30px;
+}
+
+.writingcraft {
+    color:black;
+    font-weight: bold;
+    flex:1;/* to take equa space*/
+    font-size: 32px;
+    gap: 40px;
+    font-family: 'Katibeh',serif;
+    margin-top:0px;
+    padding-top: 0px;
+}
+
+
+
+.photocraft{
+    border-radius: 30px;
+    overflow: hidden;/**/
+    flex:1;
+}
+
+.photocraft img{
+    height: 450px;
+    width:600px; /* image fill container*/
+    height:auto;/*keeps original aspect ratio*/
+    display:block;/* remove unwanted whitespace*/
+    border-radius: 30px;
+    object-fit:cover;/* image fill area properly*/
+    margin-left: 20px;
+}
+
+
+}
